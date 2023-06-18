@@ -4,8 +4,6 @@
 
 #### _A programming language quizlet_
 
-https://willjolley.github.io/code-lang/
-
 ## Technologies Used
 
 * HTML
