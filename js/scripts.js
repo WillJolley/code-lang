@@ -1,19 +1,23 @@
 window.onload = function () {
-  function handleRadio(event) {
+  document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
+    
     const ans1 = document.querySelector("input[name='ans1']:checked").value;
-    const ans2 = document.querySelector("input[name='ans2']:checked").value;
-  }
-
-  window.addEventListener("load", function() {
-    document.getElementById("quiz").addEventListener("submit", handleRadio);
+    const ans3 = document.querySelector("input[name='ans3']:checked").value;
 
     const javascript = document.getElementById("javascript")
     javascript.setAttribute("class", "hidden");
-    const front = document.getElementById("front");
+    const ruby = document.getElementById("ruby");
+    ruby.setAttribute("class", "hidden");
+    const python = document.getElementById("python");
+    python.setAttribute("class", "hidden");
 
-    if (ans1 === front) {
+    if (ans1 === "front") {
       javascript.removeAttribute("class");
+    } else if (ans3 === "edu") {
+      python.removeAttribute("class");
+    } else if (ans3 === "webApps") {
+      ruby.removeAttribute("class");
     }
   });
 }
